@@ -18,6 +18,12 @@ selfservice:
   methods:
     password:
       enabled: true
+    passkey:
+      enabled: true
+      config:
+        display_name: "My Display Name"
+
+
 
   flows:
     error:
