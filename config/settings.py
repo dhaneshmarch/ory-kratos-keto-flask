@@ -20,7 +20,7 @@ SECRET_KEY = env.str("SECRET_KEY", default="something-insecure")
 KRATOS_EXTERNAL_API_URL = env.str(
     "KRATOS_EXTERNAL_API_URL", default="http://127.0.0.1:4433"
 )
-KRATOS_UI_URL = env.str("KRATOS_UI_URL", default="http://127.0.0.1:4455")
+KRATOS_UI_URL = "https://8bc3-27-107-132-78.ngrok-free.app"
 
 # Keto
 KETO_API_READ_URL = env.str("KETO_API_READ_URL", default="http://127.0.0.1:4466")
