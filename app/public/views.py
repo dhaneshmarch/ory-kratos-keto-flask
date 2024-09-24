@@ -19,10 +19,10 @@ def home():
     """Home page."""
 
     if 'ory_kratos_session' not in request.cookies:
-        return redirect(settings.KRATOS_UI_URL)
-
+        return redirect("http://localhost:4455")
+    print(f"DEBUG Cookies: {request.cookies}")
     response = requests.get(
-        f"{settings.KRATOS_EXTERNAL_API_URL}/sessions/whoami",
+        f"http://localhost:4433/sessions/whoami",
         cookies=request.cookies
     )
     active = response.json().get('active')

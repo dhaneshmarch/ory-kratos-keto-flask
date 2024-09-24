@@ -15,9 +15,9 @@ session:
     required_aal: aal1
 
 selfservice:
-  default_browser_return_url: https://8bc3-27-107-132-78.ngrok-free.app/
+  default_browser_return_url: http://localhost:4455/
   allowed_return_urls:
-    - https://8bc3-27-107-132-78.ngrok-free.app
+    - http://localhost:4455
 
   methods:
     password:
@@ -26,51 +26,51 @@ selfservice:
       enabled: true
       config:
         rp:
-          id: 8bc3-27-107-132-78.ngrok-free.app
+          id: localhost
           origins:
-            - https://8bc3-27-107-132-78.ngrok-free.app
+            - http://localhost:4455
           display_name: "My Display Name"
     webauthn:
       enabled: true
       config:
         passwordless: true
         rp:
-          id: 8bc3-27-107-132-78.ngrok-free.app
+          id: localhost
           origins:
-            - https://8bc3-27-107-132-78.ngrok-free.app
+            - http://localhost:4455
           display_name: "March 2024"
 
 
 
   flows:
     error:
-      ui_url: https://8bc3-27-107-132-78.ngrok-free.app/error
+      ui_url: http://localhost:4455/error
 
     settings:
-      ui_url: https://8bc3-27-107-132-78.ngrok-free.app/settings
+      ui_url: http://localhost:4455/settings
       privileged_session_max_age: 15m
 
     recovery:
       enabled: true
-      ui_url: https://8bc3-27-107-132-78.ngrok-free.app/recovery
+      ui_url: http://localhost:4455/recovery
 
     verification:
       enabled: true
-      ui_url: https://8bc3-27-107-132-78.ngrok-free.app/verification
+      ui_url: http://localhost:4455/verification
       after:
-        default_browser_return_url: https://8bc3-27-107-132-78.ngrok-free.app/
+        default_browser_return_url: http://localhost:4455/
 
     logout:
       after:
-        default_browser_return_url: https://8bc3-27-107-132-78.ngrok-free.app/login
+        default_browser_return_url: http://localhost:4455/login
 
     login:
-      ui_url: https://8bc3-27-107-132-78.ngrok-free.app/login
+      ui_url: http://localhost:4455/login
       lifespan: 10m
 
     registration:
       lifespan: 10m
-      ui_url: https://8bc3-27-107-132-78.ngrok-free.app/registration
+      ui_url: http://localhost:4455/registration
       after:
         password:
           hooks:

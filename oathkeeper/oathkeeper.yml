@@ -30,7 +30,7 @@ errors:
     redirect:
       enabled: true
       config:
-        to: https://8bc3-27-107-132-78.ngrok-free.app/auth/login
+        to: http://localhost:4455/auth/login
         when:
           - error:
               - unauthorized

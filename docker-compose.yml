@@ -37,6 +37,8 @@ services:
       - type: bind
         source: ./
         target: /app
+    ports:
+      - "5001:5001"
 
 
   kratos-migrate:

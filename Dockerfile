@@ -10,4 +10,4 @@ COPY . .
 
 EXPOSE 2992
 EXPOSE 5001
-CMD [ "pipenv", "run", "flask", "run", "-p", "5001", "-h", "0.0.0.0"]
+CMD [ "pipenv", "run", "flask", "run", "-p", "5001", "-h", "localhost"]
