@@ -30,6 +30,7 @@ services:
     environment:
       - FLASK_APP=autoapp.py
       - FLASK_ENV=development
+      - KETO_API_READ_URL=http://keto:4466
     networks:
       - intranet
     restart: on-failure
@@ -121,6 +122,12 @@ services:
       - DSN=postgresql://postgres:password@host.docker.internal:5432/keto?sslmode=disable&max_conns=20&max_idle_conns=4
     networks:
       - intranet
+    command: |
+      sh -c "
+        sleep 10
+        keto relation-tuple create /home/ory/policies/policy.json
+        tail -f /dev/null
+      "
 
   keto:
     image: oryd/keto:v0.12.0

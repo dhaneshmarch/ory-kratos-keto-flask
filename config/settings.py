@@ -23,4 +23,4 @@ KRATOS_EXTERNAL_API_URL = env.str(
 KRATOS_UI_URL = env.str("KRATOS_UI_URL", default="http://localhost:4455")
 
 # Keto
-KETO_API_READ_URL = env.str("KETO_API_READ_URL", default="http://localhost:4466")
+KETO_API_READ_URL = env.str("KETO_API_READ_URL", default="http://keto:4466")

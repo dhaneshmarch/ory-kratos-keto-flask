@@ -22,7 +22,7 @@ def home():
         return redirect("http://localhost:4455")
     print(f"DEBUG Cookies: {request.cookies}")
     response = requests.get(
-        f"http://localhost:4433/sessions/whoami",
+        f"http://kratos:4433/sessions/whoami",
         cookies=request.cookies
     )
     active = response.json().get('active')
@@ -32,16 +32,17 @@ def home():
     email = response.json().get('identity', {}).get('traits', {}).get('email').replace('@', '')
 
     # Check permissions
-
-    response = requests.get(
-        f"{settings.KETO_API_READ_URL}/check",
-        params={
+    
+    response = requests.post(
+        f"{settings.KETO_API_READ_URL}/relation-tuples/check",
+        json={
             "namespace": "app",
             "object": "homepage",
             "relation": "read",
             "subject_id": email,
         }
     )
+    print("KETO RESPONSE", response.json())
     if not response.json().get("allowed"):
         abort(HTTP_STATUS_FORBIDDEN)
 
