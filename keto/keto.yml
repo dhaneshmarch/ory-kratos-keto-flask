@@ -4,16 +4,8 @@ log:
   level: debug
 
 namespaces:
-  - name: app
+  - name: shopdev
     id: 1
-  - name: shop
-    id: 2
-  - name: admin
-    id: 3
-  - name: store_management
-    id: 4
-  - name: permissions
-    id: 5
 
 serve:
   read:

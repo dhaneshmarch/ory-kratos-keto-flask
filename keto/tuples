@@ -1,0 +1,111 @@
+{
+  "namespace": "shopdev",
+  "object": "admin_portal",
+  "relation": "access",
+  "subject_id": "admin"
+}
+
+
+{
+  "namespace": "shopdev",
+  "object": "designer_portal",
+  "relation": "access",
+  "subject_id": "admin"
+}
+
+{
+  "namespace": "shopdev",
+  "object": "shop",
+  "relation": "access",
+  "subject_id": "admin"
+}
+
+
+{
+  "namespace": "shopdev",
+  "object": "designer_portal",
+  "relation": "access",
+  "subject_id": "designer"
+}
+
+
+{
+  "namespace": "shopdev",
+  "object": "shop",
+  "relation": "access",
+  "subject_id": "designer"
+}
+
+
+
+{
+  "namespace": "shopdev",
+  "object": "shop",
+  "relation": "access",
+  "subject_id": "*"
+}
+
+
+
+{
+  "namespace": "shopdev",
+  "object": "admin",
+  "relation": "member",
+  "subject_id": "dhanesh@mt.com"
+}
+
+{
+  "namespace": "shopdev",
+  "object": "admin",
+  "relation": "member",
+  "subject_id": "sukh@mt.com"
+}
+
+
+
+{
+  "namespace": "shopdev",
+  "object": "designer",
+  "relation": "member",
+  "subject_id": "aniket@mt.com"
+}
+
+
+{
+  "namespace": "shopdev",
+  "object": "designer",
+  "relation": "member",
+  "subject_id": "anuja@mt.com"
+}
+
+
+
+5. Role-based access:
+
+```json
+{
+  "namespace": "shopdev",
+  "object": "admin_portal",
+  "relation": "access",
+  "subject_set": {
+    "namespace": "shopdev",
+    "object": "admin",
+    "relation": "member"
+  }
+}
+```
+
+```json
+{
+  "namespace": "shopdev",
+  "object": "designer_portal",
+  "relation": "access",
+  "subject_set": {
+    "namespace": "shopdev",
+    "object": "designer",
+    "relation": "member"
+  }
+}
+```
+
+
