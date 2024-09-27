@@ -6,6 +6,12 @@ log:
 namespaces:
   - name: shopdev
     id: 1
+  - name: roles
+    id: 2
+  - name: resources
+    id: 3
+  
+  
 
 serve:
   read:
