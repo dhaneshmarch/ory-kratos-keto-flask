@@ -45,10 +45,6 @@
             "credentials": {
               "password": {
                 "identifier": true
-              },
-              "code": {
-                "identifier": true,
-                "via": "sms"
               }
             }
           }
