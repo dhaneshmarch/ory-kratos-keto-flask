@@ -4,12 +4,10 @@ log:
   level: debug
 
 namespaces:
-  - name: shopdev
-    id: 1
   - name: roles
-    id: 2
+    id: 1
   - name: resources
-    id: 3
+    id: 2
   
   
 

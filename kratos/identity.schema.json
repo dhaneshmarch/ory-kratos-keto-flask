@@ -22,6 +22,10 @@
               },
               "passkey": {
                 "display_name": true
+              },
+              "code": {
+                "identifier": true,
+                "via": "email"
               }
             },
             "verification": {
@@ -29,6 +33,23 @@
             },
             "recovery": {
               "via": "email"
+            }
+          }
+        },
+        "phone": {
+          "type": "string",
+          "format": "tel",
+          "title": "Phone number",
+          "minLength": 3,
+          "ory.sh/kratos": {
+            "credentials": {
+              "password": {
+                "identifier": true
+              },
+              "code": {
+                "identifier": true,
+                "via": "sms"
+              }
             }
           }
         },
@@ -46,7 +67,7 @@
           }
         }
       },
-      "required": ["email"],
+      "required": ["email", "phone"],
       "additionalProperties": false
     }
   }

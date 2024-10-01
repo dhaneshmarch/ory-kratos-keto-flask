@@ -39,6 +39,9 @@ selfservice:
           origins:
             - http://localhost:4455
           display_name: "March 2024"
+    code:
+      mfa_enabled: false
+      passwordless_enabled: true
 
 
 
@@ -106,4 +109,20 @@ identity:
 
 courier:
   smtp:
-    connection_uri: smtps://test:test@mailslurper:1025/?skip_ssl_verify=true
+    connection_uri: smtp://<postmark_server_token>:<postmark_server_token>@smtp.postmarkapp.com:587
+    from_address: dev@marchtee.com
+    from_name: March Dev
+  channels:
+    - id: sms
+      type: http
+      request_config:
+        url: https://api.twilio.com/2010-04-01/Accounts/<TWILIO ID>/Messages.json
+        method: POST
+        body: base64://bcKrHuuQv2Z1bmN0aW9uKGN0eCkgewogIFRvOiBjdHgucmVjaXBpZW50LAogIEJvZHk6IGN0eC5ib2R5LAogIEZyb206ICIrMTIwODg1NjY1NDIiCn0=
+        headers:
+          Content-Type: application/x-www-form-urlencoded
+        auth:
+          type: basic_auth
+          config:
+            user: <TWILIO ID>
+            password: <TWILIO AUTH>
