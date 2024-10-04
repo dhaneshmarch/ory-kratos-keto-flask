@@ -1,0 +1,18 @@
+http://localhost:4433/self-service/methods/oidc/callback/google - use this as a redirect URL
+
+
+
+https://github.com/ory/kratos-client-python python backend client for kratos to login register, generate flow ids. 
+
+
+
+New Identity flow for restricted users - https://www.ory.sh/docs/kratos/manage-identities/invite-users
+
+
+DOC for identity management - https://www.ory.sh/docs/kratos/manage-identities/overview
+
+
+
+API flow for OIDC logins - https://github.com/ory/kratos/issues/707
+
+
